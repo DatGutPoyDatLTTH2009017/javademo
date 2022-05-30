@@ -59,4 +59,9 @@ public class User {
         this.birthday = birthday;
     }
 
+    public void setPasswordHash(String s) {
+    }
+
+    public void setStatus(int i) {
+    }
 }
