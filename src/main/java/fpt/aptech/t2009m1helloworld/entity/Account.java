@@ -254,4 +254,7 @@ public class Account extends BaseEntity {
             return account;
         }
     }
+
+    private void setDeleteBy(int deleteBy) {
+    }
 }

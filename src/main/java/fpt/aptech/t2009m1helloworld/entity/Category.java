@@ -5,6 +5,7 @@ import fpt.aptech.t2009m1helloworld.entity.myenum.CategoryStatus;
 
 import java.time.LocalDateTime;
 
+
 public class Category extends BaseEntity {
 
     private int id;
@@ -43,6 +44,15 @@ public class Category extends BaseEntity {
 
     public void setStatus(CategoryStatus status) {
         this.status = status;
+    }
+
+    public boolean isValid() {
+        checkValid();
+        return errors.size() == 0;
+    }
+
+    private void checkValid() {
+        
     }
 
     public static final class CategoryBuilder {
