@@ -37,7 +37,6 @@ public class CreateProduct extends HttpServlet {
                     .withDetail(detail)
                     .withThumbnail(thumbnail)
                     .withPrice(price)
-                    .withStatus(ProductStatus.of(status))
                     .build();
             if (product.isValid()) {
                 boolean result = productModel.save(product);
