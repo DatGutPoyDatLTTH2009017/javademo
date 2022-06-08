@@ -30,8 +30,8 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html; charset=UTF-8");
-        resp.setCharacterEncoding("UTF-8");
+//        resp.setContentType("text/html; charset=UTF-8");
+//        resp.setCharacterEncoding("UTF-8");
         // lấy giá trị từ form gửi lên.
         String username = req.getParameter("username");
         String password = req.getParameter("password");
@@ -64,7 +64,7 @@ public class RegisterServlet extends HttpServlet {
         // thực hiện save
         accountModel.save(account);
         req.setAttribute("account", account);
-        req.getRequestDispatcher("/user/register-success.jsp").forward(req, resp);
+        req.getRequestDispatcher("/client/users/login.jsp").forward(req, resp);
     }
 
     public static void main(String[] args) {
