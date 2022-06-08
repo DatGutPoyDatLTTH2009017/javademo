@@ -3,11 +3,11 @@ package fpt.aptech.t2009m1helloworld.service;
 import fpt.aptech.t2009m1helloworld.entity.Account;
 import fpt.aptech.t2009m1helloworld.model.AccountModel;
 import fpt.aptech.t2009m1helloworld.model.MySqlAccountModel;
+import fpt.aptech.t2009m1helloworld.util.SHA512Hasher;
 import jdk.internal.dynalink.support.NameCodec;
 
 public class AccountService {
     private AccountModel accountModel;
-    private Object SHA512Hasher;
 
     public AccountService() {
         this.accountModel = new MySqlAccountModel();
